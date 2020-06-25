@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="476.0" prefWidth="681.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prng.FXMLDocumentController">
+   <children>
+      <Pane fx:id="nav" prefHeight="95.0" prefWidth="706.0" stylesheets="@style.css">
+         <children>
+            <Label layoutX="137.0" layoutY="15.0" text="P       R       N      G" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#211e57fc" height="29.9" offsetX="1.0" offsetY="1.0" radius="15.932499999999997" width="35.83" />
+               </effect></Label>
+            <Label layoutX="138.0" layoutY="53.0" text="Based on Lineair Shift FeedBack Register" textFill="WHITE" />
+            <JFXButton fx:id="clos" layoutX="656.0" layoutY="15.0" onAction="#handleButtonClose" stylesheets="@style.css" text="x" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="150.0" fitWidth="70.0" layoutX="27.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@shield.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow color="#000000ca" />
+         </effect>
+      </Pane>
+      <ImageView fx:id="imgDon" fitHeight="49.0" fitWidth="40.0" layoutX="93.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@checked.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txtDon" layoutX="151.0" layoutY="359.0" text="Succsesfully Done !" textFill="#30cd2d" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgEror" fitHeight="49.0" fitWidth="40.0" layoutX="93.0" layoutY="351.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@cancel.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="txtEror" layoutX="151.0" layoutY="359.0" text="Error ! Key must be 8 bytes !!" textFill="#eb4c49" visible="false">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="326.0" fitWidth="704.0" layoutX="2.0" layoutY="156.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@ff.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXTextField fx:id="RoundTxt" focusColor="#29b6f6" layoutX="90.0" layoutY="196.0" prefHeight="32.0" prefWidth="218.0" promptText="Rounds" unFocusColor="#277190" />
+      <JFXPasswordField fx:id="KeyTxt" focusColor="#29b6f6" layoutX="94.0" layoutY="132.0" prefHeight="32.0" prefWidth="213.0" promptText="Entre the key" unFocusColor="#277190" />
+      <JFXButton id="mybtn" fx:id="Btn" layoutX="91.0" layoutY="276.0" onAction="#handleButtonAction" prefHeight="32.0" prefWidth="215.0" style="-fx-background-color: #29b6f6;" text="Get StreemKey" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="95.0" fitWidth="150.0" layoutX="386.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@keyword.png" />
+         </image>
+         <effect>
+            <DropShadow color="#557583" offsetX="1.0" />
+         </effect>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="148.0" prefHeight="17.0" prefWidth="28.0" text="Key :" textFill="#094a69">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="204.0" prefHeight="10.0" prefWidth="49.0" text="Rounds :" textFill="#094a69">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="46.0" fitWidth="66.0" layoutX="646.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@add.png" />
+         </image>
+      </ImageView>
+      
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
